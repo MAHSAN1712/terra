@@ -510,7 +510,7 @@ footer .credit a {
         margin-bottom: 1rem;
     }
     .card2 {
-    max-width: 200px;
+    max-width: 180px;
     max-height: min-content;
 
     }
@@ -521,6 +521,11 @@ footer .credit a {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
+    }
+    .card2 {
+    max-width: 180px;
+    max-height: min-content;
+
     }
 
 }
