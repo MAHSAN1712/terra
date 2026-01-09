@@ -21,6 +21,8 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: var(--background) ;
     color: rgb(255, 0, 0);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -229,6 +231,7 @@ body {
     display:flex;
     justify-content:center;
     margin-top:2rem;
+    
 }
 
 .carousel{
@@ -450,19 +453,8 @@ body {
     background-color: #ff4e18;
 }
 
-.see-all {
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
-}
-
-.btn-see-all {
-  padding: 12px 25px;
-  border-radius: 999px;
-  background: #6284ff;
-  border: none;
-  color: white;
-  cursor: pointer;
+.btn-detail a {
+  color: #000;
 }
 
 
@@ -605,7 +597,7 @@ footer {
     background-color: #ffffff;
     text-align: center;
     padding: 1rem 0 3rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 footer .social {
@@ -708,6 +700,10 @@ footer .credit a {
     .berita {
         max-width: 70%;
     }
+    .majalah .card {
+    width: 260px;
+    height: 300px;
+}
 }
 
 /* Mobile Phone */

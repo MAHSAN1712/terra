@@ -207,35 +207,6 @@ body {
     font-size: 1rem;
     margin: 0.5rem;
     border-radius: 1rem;
-
-}
-
-.about-visi {
-    text-align: center;
-    padding: 1.4rem;
-    
-}
-
-.about-visi h1, .about-misi h1 {
-    border: 1px solid #ff0000;
-    background-color: #ff6600;
-    color: white;
-    margin: 0 auto;
-    max-width: fit-content;
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-
-}
-
-.about-visi p, .about-misi p {
-    margin: 0 auto;
-    max-width: 50%;
-    font-style: italic;
-
 }
 
 /* ================= SECTION ================= */
@@ -534,25 +505,16 @@ footer .credit a {
     .about .nav {
     display: none;
     }
-    .carousel .card{
-  width:150px;
-  height:180px;
-  margin-top: 2rem;
-}
-
-.card .text h3 {
-    font-size: 1rem;
-    min-height: 15rem;
-}
-
-.card .text p {
-    font-size: 1rem;
-}
-
-.card .btn {
-  font-size: 0.7rem;
     
-}
+    .carousel .card2{
+    width:225px;
+    height:fit-content;
+    margin-top: 2rem;
+    }
+
+    .menu a {
+        margin-bottom: 1rem;
+    }
     
 }
 
