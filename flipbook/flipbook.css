@@ -192,13 +192,13 @@ footer {
     text-align: center;
     padding: 1rem 0 3rem;
     margin-top: 5rem;
+    position: relative;
+    z-index: 1000;
 }
 
 footer .social {
     padding: 1rem 0;
-
 }
-
 footer .social a {
     color: #ff0000;
     margin: 1rem;
@@ -215,7 +215,6 @@ footer .links {
 footer .links a {
     color: #ff0000;
     padding: 0.7rem 1rem;
-
 }
 
 footer .credit {
