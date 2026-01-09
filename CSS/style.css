@@ -695,7 +695,7 @@ footer .credit a {
         max-width: 70%;
     }
     .majalah .card {
-      max-width: 200px;
+      width: 200px;
       max-height: 230px;
     }
     .majalah  .card img {
