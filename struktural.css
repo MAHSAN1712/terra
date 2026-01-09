@@ -21,6 +21,8 @@ body {
     font-family: "Poppins", sans-serif;
     background-color: var(--background) ;
     color: rgb(255, 0, 0);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Navbar */
@@ -511,7 +513,7 @@ footer .credit a {
     height:fit-content;
     margin-top: 2rem;
     }
-    
+
     .menu a {
         margin-bottom: 1rem;
     }

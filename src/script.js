@@ -74,9 +74,9 @@ const carousel = document.getElementById("carousel");
 function render(){
   carousel.innerHTML = "";
 
-  items.slice(0, 5).forEach((d, i) => {
+  items.slice(0, 3).forEach((d, i) => {
     const div = document.createElement("div");
-    div.className = "card" + (i === 2 ? " center" : "");
+    div.className = "card" + (i === 1 ? " center" : "");
     div.innerHTML = `
       <img src="${d.img}">
       <div class="text">
@@ -99,9 +99,9 @@ function render(){
 
 // pindahkan supaya index yang diklik jadi ke posisi tengah (index 2)
 function moveToCenter(idx){
-  while(idx !== 2){
+  while(idx !== 1){
     // kalau klik sebelah kanan → geser kiri
-    if(idx > 2){
+    if(idx > 1){
       items.push(items.shift());
       idx--;
     }

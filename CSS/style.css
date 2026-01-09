@@ -239,6 +239,8 @@ body {
   gap:20px;
   align-items:center;
   transition:.35s ease;
+  max-width: 20%;
+  justify-content: center;
 }
 
 .carousel .card{
