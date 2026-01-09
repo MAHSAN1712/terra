@@ -205,7 +205,7 @@ body {
     color: rgb(255, 255, 255);
     padding: 0.5rem;
     font-size: 1rem;
-    margin: 0.5rem;
+    margin-right: auto;
     border-radius: 1rem;
 }
 
@@ -507,7 +507,7 @@ footer .credit a {
     }
     
     .carousel .card2{
-    width:225px;
+    width:200px;
     height:fit-content;
     margin-top: 2rem;
     }
