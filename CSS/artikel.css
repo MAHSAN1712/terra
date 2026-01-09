@@ -1,0 +1,259 @@
+:root {
+    --primary: #ff4e18;
+    --background: #000000;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background) ;
+    color: rgb(255, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+    display:flex;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(0, 0, 0);
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+.navbar img {
+    max-height: 5rem;
+    border-radius: 0.5rem;
+    max-width: 5rem;
+    width: 40%;
+    align-content: center;
+    padding-right: 0.5rem;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+
+}
+.navbar .navbar-logo span {
+    color: var(--primary);
+    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+}
+
+.navbar-extra {
+    margin-left: auto;
+}
+.navbar .navbar-extra a {
+    color: #ff6600; 
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+}
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform:scaleX(0);
+    transition: 0.2s linear;
+    transform-origin: center;
+}
+
+.navbar .navbar-nav a:hover:after {
+    transform:scaleX(0.1);
+}
+
+/* Navbar Menu */
+.navbar .navbar-nav { 
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(255, 253, 253);
+        width: 25rem;
+        height: 100vh;
+        transition: 0.5s;
+
+    }
+.navbar .navbar-nav.active {
+        right: 0; 
+    }
+.navbar .navbar-nav a {
+        color: #ff6600;
+        display:block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+
+    }
+
+   
+ /* Artikel Section */
+ .artikel {
+    margin-top: 8rem;
+    display: flex;
+    
+
+ }
+
+ .artikel .container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #f4f9ff;
+    padding: 25px 30px 35px;
+    border-radius: 14px;
+    justify-items: center;
+    background-color: aliceblue;
+ }
+ 
+ .artikel .container img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto 18px;
+    border-radius: 12px;
+
+
+ }
+
+
+ .artikel .container h1 {
+    text-align: center;
+  margin: 5px 0 18px;
+  color: #c0392b;
+
+ }
+
+  .artikel .container p {
+    text-align: center;
+    line-height: 1.7;
+    color: #333;
+    font-size: 16px;
+    max-width: 750px;
+
+ }
+
+
+ .artikel .container a {
+    text-align:left;
+    background-color: #ff6600;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+
+
+ }
+
+
+
+
+ 
+
+/* Artikel Section End */
+
+
+/* Footer Section */
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 10rem;
+}
+
+footer .social {
+    padding: 1rem 0;
+
+}
+
+footer .social a {
+    color: #ff0000;
+    margin: 1rem;
+}
+
+footer .social a:hover, footer .links a:hover  {
+    color: #000000;
+}
+
+footer .links {
+    margin-bottom: 1.2rem;
+}
+
+footer .links a {
+    color: #ff0000;
+    padding: 0.7rem 1rem;
+
+}
+
+footer .credit {
+    font-size: 0.8rem;
+
+}
+
+footer .credit a {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Footer End*/
+/* Footer Section */
+
+
+
+/* Media Quaries */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .hero .content h1 {
+        font-size: 5rem;
+    }
+    .about h2{
+    
+    margin-bottom: 6rem;
+
+}
+
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+}

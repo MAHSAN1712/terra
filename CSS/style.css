@@ -1,0 +1,720 @@
+:root {
+    --primary: #ff4e18;
+    --background: #000000;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background) ;
+    color: rgb(255, 0, 0);
+}
+
+/* Navbar */
+.navbar {
+    display:flex;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(0, 0, 0);
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+
+.navbar img {
+    max-height: 5rem;
+    border-radius: 0.5rem;
+    max-width: 5rem;
+    width: 40%;
+    align-content: center;
+    padding-right: 0.5rem;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+
+}
+.navbar .navbar-logo span {
+    color: var(--primary);
+    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+}
+
+.navbar-extra {
+    margin-left: auto;
+}
+.navbar .navbar-extra a {
+    color: #ff6600; 
+    font-size: 1.4rem;
+    margin: 0 0.5rem;
+}
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform:scaleX(0);
+    transition: 0.2s linear;
+    transform-origin: center;
+}
+
+.navbar .navbar-nav a:hover:after {
+    transform:scaleX(0.1);
+}
+
+/* Navbar Menu */
+.navbar .navbar-nav { 
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(255, 253, 253);
+        width: 25rem;
+        height: 100vh;
+        transition: 0.5s;
+
+    }
+.navbar .navbar-nav.active {
+        right: 0; 
+    }
+.navbar .navbar-nav a {
+        color: #ff6600;
+        display:block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+        text-align: center;
+
+    }
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* background-image: url('FOTO/BG_TERRA.jpg'); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    mask-image: linear-gradient(rgba(0,0,0,1) 50%,rgba(0,0,0,0))  ;
+}
+
+.hero .content {
+    padding: 1.4rem;
+    /* max-width: 100rem; */
+    width: 100%;
+    text-align: center;
+    top: 150px;
+    position: fixed;
+}
+
+.hero .content h1 {
+    font-size: 6rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    /* line-height: 1.2;
+    -webkit-text-stroke: 0.1px #0000009f; */
+
+}
+
+.hero .content h1 span {
+    color: #ff6600;
+}
+
+.hero .content p {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    font-weight: 100;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding: 0.5rem;
+    
+
+}
+
+.hero .content p span {
+    color: #ff6600;
+
+}
+
+.hero .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: antiquewhite;
+    background-color: var(--background);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    
+
+
+}
+
+
+
+/* About Section */
+
+.berita, .contact, .about, .majalah {
+    padding : 8rem 7% 1.4rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.berita h2, .contact h2, .about h2, .majalah h2{
+    color: #ff6600;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+
+}
+
+.berita span, .contact span, .majalah span, .about span{
+    color: #ffffff;
+}
+
+.about-visi h1, .about-misi h1 {
+    border: 1px solid #ff0000;
+    background-color: #ff6600;
+    color: white;
+    margin: 0 auto;
+    max-width: fit-content;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+.about-visi p, .about-misi p {
+    margin: 0 auto;
+    max-width: 50%;
+    font-style: italic;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.container{
+    padding : 8rem 7% 1.4rem;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:2rem;
+}
+
+.carousel{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  transition:.35s ease;
+}
+
+.carousel .card{
+  width:220px;
+  height:300px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  opacity:.4;
+  transform:scale(.9);
+  transition:0.4s;
+  cursor:pointer;
+  margin-top: 2rem;
+  flex-shrink: 0;
+}
+
+.carousel .card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.carousel .card .text{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:10px;
+  background:linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+  font-size:14px;
+}
+
+.carousel .card.center{
+  transform:scale(1.3);
+  opacity:1;
+  z-index:5; 
+}
+
+.carousel .card .btn {
+  background: #ffffff;
+  display: grid;
+  color: #000;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+    
+}
+
+.carousel .card .btn:hover {
+    background-color: #ff4e18;
+}
+
+/* Magazine Section */
+
+.majalah {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.majalah .title {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.majalah .covers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.majalah .card {
+  width: 260px;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: scale(0.9);
+  opacity: 0.6;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.majalah  .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.majalah  .card h1 {
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+.majalah  .card h1 span {
+  color: #ff4e18;
+}
+/* Magazine Section End */
+
+/* Berita Section */
+
+.berita {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.berita-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 25px;
+}
+
+.hidden {
+  display: none;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.date {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff4e18;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.card-body {
+  padding: 18px;
+
+}
+
+.card-body h3 {
+  margin-bottom: 10px;
+  color: #ff4e18;
+  
+}
+
+.card-body p {
+  font-size: 13px;
+  color: #000000;
+}
+
+.card .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* tengah secara horizontal */
+    justify-content: flex-start;
+}
+
+.card .text h3 {
+    font-size: 1rem;
+    color: white;
+    min-height: 13rem;
+    margin-top: 0;
+}
+
+.card .text p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+
+.card .btn {
+  background: #6a1b9a;
+  display: grid;
+  color: #fff;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+    
+}
+
+.btn-detail {
+    font-family: 'Poppins',sans-serif;
+    margin-top: 14px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+    border: 1px solid #ff6600;
+}
+
+.btn-detail:hover {
+    background-color: #ff4e18;
+}
+
+.see-all {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.btn-see-all {
+  padding: 12px 25px;
+  border-radius: 999px;
+  background: #6284ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+/* Kontak Section */
+
+.contact-section {
+  padding: 80px 20px;
+  background: #000000;
+  color: #fff;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+    color: #ff6600;
+    font-size: 2.3rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-container span {
+    color: #ffffff;
+}
+.subtitle {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.contact-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+    font-family: 'Poppins',sans-serif;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+  background: #ff4e18;
+  color: #000000;
+}
+
+
+.contact-content {
+  display: none;
+}
+
+.contact-content.active {
+  display: block;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+  background-color: #ff4e18;
+}
+
+.contact-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.contact-card h3 {
+  margin: 10px 0 4px;
+  color: #000;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #000000;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffffff, #ff4e18);
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+
+.map-wrapper {
+  margin-top: 60px;
+}
+
+.map-wrapper h3 {
+  margin-bottom: 6px;
+}
+
+.map-wrapper p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* Kontak End */
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem 0 3rem;
+    margin-top: 5rem;
+}
+
+footer .social {
+    padding: 1rem 0;
+
+}
+
+footer .social a {
+    color: #ff0000;
+    margin: 1rem;
+}
+
+footer .social a:hover, footer .links a:hover  {
+    color: #000000;
+}
+
+footer .links {
+    margin-bottom: 1.2rem;
+}
+
+footer .links a {
+    color: #ff0000;
+    padding: 0.7rem 1rem;
+
+}
+
+footer .credit {
+    font-size: 0.8rem;
+
+}
+
+footer .credit a {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Footer End*/
+/* Footer Section */
+
+
+
+
+/* Media Quaries */
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .hero .content h1 {
+        font-size: 5rem;
+    }
+    .about h2 {
+        margin-bottom: 6rem;
+    }
+    .pdf-viewer {
+        width: 90%;
+        height: 80vh;
+    }
+
+    .about .nav {
+        display: none;
+    }
+    .carousel .card{
+        width:180px;
+        height:225px;
+        border-radius:20px;
+        overflow:hidden;
+        position:relative;
+        opacity:.4;
+        transform:scale(.9);
+        transition:0.4s;
+        cursor:pointer;
+        margin-top: 2rem;
+        flex-shrink: 0;
+    }
+
+    .card .text h3 {
+        font-size: 1rem;
+        min-height: 15rem;
+    }
+
+    .card .text p {
+        font-size: 1rem;
+    }
+
+    .card .btn {
+        font-size: 0.7rem;
+        
+    }
+
+    .berita {
+        max-width: 70%;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+

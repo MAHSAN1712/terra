@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMA TG "TERRA" ITB</title>
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+     <!-- Feather Icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- My Style -->
+    <link rel="stylesheet" href="flipbook.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+
+
+
+
+</head>
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <img src="TERRA.jpg" alt="Lambang TERRA">
+        <a href="#" class="navbar-logo">HIMA TG <span>"TERRA"</span> ITB</a>
+      
+      <div class="navbar-nav">
+        <a href="../index.html">Beranda</a>
+        <a href="../index.html">Tentang Kami</a>
+        <a href="../berita.html">Berita</a>
+        <a href="../kontak.html">Kontak</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Magazine Section -->
+
+    <section class="berita" id="bukan">
+
+      <header class="topbar">
+        <a href="../index.html#magazine" class="back">← Kembali</a>
+        <h2 class="title">E-Magazine <span>HIMA TG "TERRA" ITB</span></h2>
+      </header>
+
+      <div class="toolbar">
+        <button onclick="prevPage()">◀</button>
+        <button onclick="downloadPDF()">Download</button>
+        <button onclick="printPDF()">Print</button>
+        <button onclick="fullScreen()">⛶</button>
+        <button onclick="nextPage()">▶</button>
+      </div>
+
+      <div class="book-wrapper">
+        <div id="book"></div>
+      </div>
+
+    </section>
+
+    <!-- Magazine Section End-->
+
+     <!-- Footer -->
+    <footer>
+      <div class="social">
+        <a
+          href="https://www.instagram.com/parjangboyz?igsh=MTh3a3E5c3Q4bmJ0eQ%3D%3D&utm_source=qr"
+        >
+          <i data-feather="instagram"></i>
+        </a>
+        <a href="#">
+          <i data-feather="twitter"></i>
+        </a>
+         <a href="https://www.tiktok.com/@username" class="social-icon" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v13.5a4.5 4.5 0 1 1-4.5-4.5"/>
+            <path d="M12 2c1.5 3 4 4.5 7 4.5"/>
+          </svg>
+        </a>
+        <a href="#">
+          <i data-feather="youtube"></i>
+        </a>
+      </div>
+
+     <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html">Tentang Kami</a>
+        <a href="../berita.html">Berita</a>
+        <a href="../kontak.html">Kontak</a>
+      </div>
+
+
+      <div class="credit">
+        <p>Created by <a href="#">BPH HIMA TG "TERRA" ITB</a>. | &copy; 2026/2027.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Feather Icons -->
+
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My Java Script -->
+    <script src="1.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://unpkg.com/page-flip/dist/js/page-flip.browser.js"></script>
+  
+
+</body>
+</html>
