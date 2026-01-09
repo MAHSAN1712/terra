@@ -669,18 +669,12 @@ footer .credit a {
     .about .nav {
         display: none;
     }
+    .container{
+      max-width:100%;
+    }
     .carousel .card{
         width:180px;
         height:225px;
-        border-radius:20px;
-        overflow:hidden;
-        position:relative;
-        opacity:.4;
-        transform:scale(.9);
-        transition:0.4s;
-        cursor:pointer;
-        margin-top: 2rem;
-        flex-shrink: 0;
     }
 
     .card .text h3 {
@@ -701,8 +695,13 @@ footer .credit a {
         max-width: 70%;
     }
     .majalah .card {
-    width: 180px;
-    height: 200px;
+      max-width: 200px;
+      max-height: 230px;
+    }
+    .majalah  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     }
 }
 
