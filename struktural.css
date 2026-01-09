@@ -234,7 +234,7 @@ body {
 /* MODE STATIS */
 .carousel.static {
   height: auto;
-  gap: 30px;
+  gap: 32px;
   padding-bottom: 20px;
 }
 
@@ -334,7 +334,7 @@ body {
     font-size: 13px;
     line-height: 1.4;
     color: #bbb;
-    text-align: center;
+     text-align: center;
 }
 
 /* ================= BUTTON ================= */
@@ -505,14 +505,15 @@ footer .credit a {
     .about .nav {
     display: none;
     }
-
+    
+    .carousel .card2{
+    width:200px;
+    height:fit-content;
+    margin-top: 2rem;
+    }
+    
     .menu a {
         margin-bottom: 1rem;
-    }
-    .card2 {
-    max-width: 180px;
-    max-height: min-content;
-
     }
     
 }
@@ -521,11 +522,6 @@ footer .credit a {
 @media (max-width: 450px) {
     html {
         font-size: 55%;
-    }
-    .card2 {
-    max-width: 180px;
-    max-height: min-content;
-
     }
 
 }
