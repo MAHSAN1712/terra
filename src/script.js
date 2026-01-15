@@ -16,6 +16,36 @@ document.addEventListener('click', function (e) {
     }
 });
 
+const cardss = document.querySelectorAll('.proker-grid .card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+cardss.forEach(card => observer.observe(card));
+
+// kepanitiaan '.gallery'
+const galleries = document.querySelectorAll('.auto-gallery');
+
+galleries.forEach(gallery => {
+  let scrollAmount = 0;
+
+  setInterval(() => {
+    scrollAmount += 1;
+    gallery.scrollLeft = scrollAmount;
+
+    if (scrollAmount >= gallery.scrollWidth - gallery.clientWidth) {
+      scrollAmount = 0;
+    }
+  }, 30); // makin besar = makin lambat
+});
 // card
 
 const cards = document.querySelectorAll('.card');

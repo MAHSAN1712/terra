@@ -184,20 +184,20 @@ body {
 
 /* About Section */
 
-.berita, .contact, .about, .majalah {
+.berita, .contact, .about, .majalah, .proker {
     padding : 8rem 7% 1.4rem;
     text-align: center;
     justify-content: center;
 }
 
-.berita h2, .contact h2, .about h2, .majalah h2{
+.berita h2, .contact h2, .about h2, .majalah h2, .proker h2{
     color: #ff6600;
     font-size: 2.3rem;
     margin-bottom: 2rem;
 
 }
 
-.berita span, .contact span, .majalah span, .about span{
+.berita span, .contact span, .majalah span, .about span, .proker span{
     color: #ffffff;
 }
 
@@ -218,7 +218,7 @@ body {
 
 .about-visi p, .about-misi p {
     margin: 0 auto;
-    max-width: 50%;
+    max-width: 80%;
     font-style: italic;
     background-color: #ffffff;
     border-radius: 0.5rem;
@@ -301,7 +301,7 @@ body {
 
 .majalah {
   text-align: center;
-  padding: 60px 20px;
+
 }
 
 .majalah .title {
@@ -342,6 +342,84 @@ body {
   color: #ff4e18;
 }
 /* Magazine Section End */
+
+/* Kepanitaan Section */
+
+.proker-section {
+  display: flex;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.proker-card {
+  background: #151515;
+  width: 260px;
+  padding: 18px;
+  border-radius: 20px; 
+  position: relative;
+}
+
+.proker-card h3 {
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  color: #ff6600;
+
+}
+
+.proker-card p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  padding: 0.8rem;
+  text-align: justify;
+}
+
+.proker-card a {
+  color: #ffffff;
+  padding: 2rem;
+  margin: 1rem;
+}
+.proker-card a:hover {
+  color: #ff6600;
+}
+
+.auto-gallery {
+  display: flex;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.auto-gallery img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.proker-card-bottom {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Kepanitiaan Section End */
+
+
+
+
+
+
+
+
+
+
+
 
 /* Berita Section */
 
