@@ -184,20 +184,20 @@ body {
 
 /* About Section */
 
-.berita, .contact, .about, .majalah, .proker {
+.berita, .contact, .about, .majalah, .proker, .staff {
     padding : 8rem 7% 1.4rem;
     text-align: center;
     justify-content: center;
 }
 
-.berita h2, .contact h2, .about h2, .majalah h2, .proker h2{
+.berita h2, .contact h2, .about h2, .majalah h2, .proker h2, .staff h2{
     color: #ff6600;
     font-size: 2.3rem;
     margin-bottom: 2rem;
 
 }
 
-.berita span, .contact span, .majalah span, .about span, .proker span{
+.berita span, .contact span, .majalah span, .about span, .proker span, .staff span{
     color: #ffffff;
 }
 
@@ -296,6 +296,135 @@ body {
 .carousel .card .btn:hover {
     background-color: #ff4e18;
 }
+/* Best Staff & Divsion */
+.staff {
+  min-height: 100vh;
+  background: #000;
+  color: white;
+  text-align: center;
+}
+
+/* INI YANG PALING PENTING */
+.staff {
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* HEADER */
+.staff-header h1 {
+  color: #ff5722;
+  margin-top: 40px;
+}
+
+.staff-header h2 {
+  color: orange;
+}
+
+#periode {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #ff9800;
+  background-color: #ff4e18;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+
+}
+
+#periode {
+  margin-top: 10px;
+  color: #ffffff;
+  
+}
+
+/* GRID */
+#staffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Ini mengunci agar selalu ada 5 kolom */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px; /* Jarak antar kartu */
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* CARD */
+.staff .card {
+  background: #111;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.staff .card img {
+  max-width: 10rem;
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.staff .card h3 {
+  margin: 12px 0 4px;
+  color: orange;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #fff;
+
+  
+}
+
+.staff .card p {
+  margin-bottom: 14px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* NAV */
+
+.staff .nav button a {
+  font-family: 'Poppins',sans-serif;
+  color: #000;
+  padding: 1.2rem;
+  margin: auto;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+.staff .nav button :hover {
+  background-color: #ff4e18;
+}
+
+.staff .nav button a {
+  background-color: #ffffff;
+}
+
+
+
+.staff .nav button  {
+  background: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+/* Best Staff & Divison End */
+
+
+
+
 
 /* Magazine Section */
 
@@ -341,6 +470,12 @@ body {
 .majalah  .card h1 span {
   color: #ff4e18;
 }
+
+.majalah  .card p {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
 /* Magazine Section End */
 
 /* Kepanitaan Section */
@@ -367,21 +502,26 @@ body {
   margin-bottom: 5px;
   font-size: 1.3rem;
   color: #ff6600;
+  background-color: #3c3c3c;
+  padding: 0.5rem;
+  bottom: 12px;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  border: 1px solid white;
 
 }
 
 .proker-card p {
   font-size: 1rem;
   color: #ffffff;
-  margin-bottom: 3rem;
   padding: 0.8rem;
   text-align: justify;
+
 }
 
 .proker-card a {
   color: #ffffff;
-  padding: 2rem;
-  margin: 1rem;
+
 }
 .proker-card a:hover {
   color: #ff6600;
@@ -401,13 +541,22 @@ body {
   flex-shrink: 0;
 }
 
-.proker-card-bottom {
-  position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
+.proker-card-bottom a {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
-
+.proker-card-bottom {
+ background-color: #333; 
+  padding: 15px;
+  border-bottom-left-radius: 15px;
+  border-top: 1px solid white;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
 /* Kepanitiaan Section End */
 
 
@@ -792,4 +941,3 @@ footer .credit a {
     }
 
 }
-

@@ -77,6 +77,123 @@
      </section>
     <!-- Tentang Kami Section End-->
 
+    <!-- Best Staff & Division -->
+
+ <section class="staff" id="staff">
+  <h2>Our <span>Best Of
+    </span>Division <span>&</span> Staff</h2>
+
+  <header class="staff-header">
+    <p id="periode">Periode: Juni 2026</p>
+  </header>
+
+  <!-- GRID (INI WAJIB ADA) -->
+  <section class="grid" id="staffGrid">
+    <script>
+          // ===============================
+        // STAFF YEARBOOK - ISOLATED SCRIPT
+        // ===============================
+        (function () {
+          // tunggu DOM siap, TANPA ganggu JS lain
+          document.addEventListener("DOMContentLoaded", function () {
+
+            const grid = document.getElementById("staffGrid");
+            const periode = document.getElementById("periode");
+
+            // kalau halaman ini bukan halaman staff, keluar diam-diam
+            if (!grid || !periode) return;
+
+            const staffData = {
+              juni: {
+                label: "June - BPH HIMA TG TERRA ITB 2026/2027" ,
+                members: [
+                  { name: "Muhammad", role: "TERRA ON FIRE", img: "default.jpg" },
+                  { name: "Dina Putri", role: "TERRA OF THE MONTH", img: "default.jpg" },
+                  { name: "Ahmad Fauzi", role: "Best Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+          
+                ]
+              },
+              juli: {
+                label: "July - BPH HIMA TG TERRA ITB 2026/2027",
+                members: [
+                  { name: "Muhammad", role: "TERRA ON FIRE", img: "default.jpg" },
+                  { name: "Dina Putri", role: "TERRA OF THE MONTH", img: "default.jpg" },
+                  { name: "Ahmad Fauzi", role: "Best Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+                  { name: "Dina Putri", role: "Best Staff on Secretary Division", img: "default.jpg" },
+          
+                ]
+              }
+            };
+
+            const months = Object.keys(staffData);
+            let currentMonthIndex = 0;
+
+            function render() {
+              const data = staffData[months[currentMonthIndex]];
+              periode.textContent = "Periode: " + data.label;
+
+              grid.innerHTML = "";
+              data.members.forEach(m => {
+                const card = document.createElement("div");
+                card.className = "card";
+                card.innerHTML = `
+                  <img src="${m.img}">
+                  <h3>${m.name}</h3>
+                  <p>${m.role}</p>
+                `;
+                grid.appendChild(card);
+              });
+            }
+
+            // expose HANYA yang dibutuhkan tombol
+            window.staffNext = function () {
+              currentMonthIndex = (currentMonthIndex + 1) % months.length;
+              render();
+            };
+
+            window.staffPrev = function () {
+              currentMonthIndex =
+                (currentMonthIndex - 1 + months.length) % months.length;
+              render();
+            };
+
+            render();
+          });
+        })();
+    </script>
+  </section>
+
+  <div class="nav">
+  <button onclick="staffPrev()"><a href="#staff">◀ Back</a></button>
+  <button onclick="staffNext()"> <a href="#staff">Next ▶</a></button>
+  </div>
+
+</section>
+    <!-- Best Staff & Division End -->
+
 
     <!-- Magazine Section -->
   <section class="majalah" id="magazine">
@@ -99,6 +216,7 @@
       </div>
     </div>  
   </section>
+
    <!-- Magazine Section End-->
 
    <!-- Kepanitiaan Section -->
@@ -113,10 +231,19 @@
           <img src="CSS/FOTO/WISUDA/2.jpg">
           <img src="CSS/FOTO/WISUDA/3.jpg">
         </div>
-        <p>Kepanitiaan Wisuda adalah wadah kolaborasi mahasiswa yang berperan aktif dalam menyukseskan acara wisuda. Panitia bertugas mengelola teknis acara, menjaga ketertiban, serta menciptakan suasana wisuda yang lancar, nyaman, dan penuh makna bagi seluruh wisudawan.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi architecto ullam provident iusto! Dignissimos ipsum similique ullam eligendi aliquid, ipsa aperiam culpa earum neque quod vel! Reiciendis, facere repellat.</p>
         <div class="proker-card-bottom">
           <a href="https://www.instagram.com/terrawisuda?igsh=MW5pMmZnM2pmeXBkag==">
               <i data-feather="instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@wisudaterraitb?_r=1&_t=ZS-92vm3CADjKE" class="social-icon" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v13.5a4.5 4.5 0 1 1-4.5-4.5"/>
+            <path d="M12 2c1.5 3 4 4.5 7 4.5"/>
+          </svg>
         </a>
         </div>
         
@@ -130,9 +257,9 @@
           <img src="img/6.jpg">
         </div>
           
-        <p>SEKARAT merupakan kepanitiaan yang bertugas membangun semangat, solidaritas, dan dukungan moral bagi Massa Terra dalam setiap kegiatan dan agenda organisasi. Melalui kreativitas, kekompakan, serta semangat kebersamaan, SEKARAT menjadi motor penggerak atmosfer positif dan identitas kolektif Massa TERRA.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi architecto ullam provident iusto! Dignissimos ipsum similique ullam eligendi aliquid, ipsa aperiam culpa earum neque quod vel! Reiciendis, facere repellat.</p>
         <div class="proker-card-bottom">
-          <a href="https://www.instagram.com/terrawisuda?igsh=MW5pMmZnM2pmeXBkag==">
+          <a href="https://www.instagram.com/teriakanterra?igsh=cmN2Y3FoYTVmNnA1">
               <i data-feather="instagram"></i>
         </a>
         </div>
@@ -146,10 +273,13 @@
           <img src="img/8.jpg">
           <img src="img/9.jpg">
         </div>
-          <p>BARTER adalah kepanitiaan yang bergerak di bidang musik sebagai media ekspresi, aspirasi, dan pemersatu Massa Terra. BARTER berperan menghadirkan karya musik yang mencerminkan semangat, perjuangan, serta nilai kebersamaan dalam lingkungan TERRA.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi architecto ullam provident iusto! Dignissimos ipsum similique ullam eligendi aliquid, ipsa aperiam culpa earum neque quod vel! Reiciendis, facere repellat.</p>
         <div class="proker-card-bottom">
-          <a href="https://www.instagram.com/terrawisuda?igsh=MW5pMmZnM2pmeXBkag==">
+          <a href="https://www.instagram.com/barter.itb?igsh=MTBybjBiMTMwempiaQ==">
               <i data-feather="instagram"></i>
+        </a>
+         <a href="https://youtube.com/@barter_itb?si=1A6WPl42IW1JGCx2">
+          <i data-feather="youtube"></i>
         </a>
         </div>
       </div>
@@ -161,10 +291,19 @@
           <img src="img/11.jpg">
           <img src="img/12.jpg">
         </div>
-          <p>PEMIRA HIMA TG "TERRA" ITB merupakan kepanitiaan yang bertanggung jawab dalam penyelenggaraan Pemilihan Raya Terra sebagai wujud demokrasi di lingkungan organisasi. Panitia memastikan seluruh proses pemira berjalan secara jujur, adil, transparan, dan partisipatif guna melahirkan kepemimpinan yang legitim dan berintegritas.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate animi architecto ullam provident iusto! Dignissimos ipsum similique ullam eligendi aliquid, ipsa aperiam culpa earum neque quod vel! Reiciendis, facere repellat.</p>
         <div class="proker-card-bottom">
-          <a href="https://www.instagram.com/terrawisuda?igsh=MW5pMmZnM2pmeXBkag==">
+          <a href="https://www.instagram.com/pemiraterra2026?igsh=cGx2b2hiOWpvMG5p">
               <i data-feather="instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@pemiraterra2026?_r=1&_t=ZS-935uqSjc7iZ" class="social-icon" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v13.5a4.5 4.5 0 1 1-4.5-4.5"/>
+            <path d="M12 2c1.5 3 4 4.5 7 4.5"/>
+          </svg>
         </a>
         </div>
     </section>

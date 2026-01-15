@@ -163,5 +163,4 @@ iframe.onload = () => {
 
 function fullscreen() {
   pdfIframe.requestFullscreen();
-}
-
+};
